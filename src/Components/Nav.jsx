@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -26,13 +28,31 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
           <Typography variant="h6" className={classes.title}>
-            News
+            <Button color="inherit">
+              <Link to="/">Home</Link>
+            </Button>
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Typography variant="h6" className={classes.title}>
+            <Button color="inherit">
+              <Link to="/about">About</Link>
+            </Button>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <Button color="inherit">
+              <Link to="/runners">Runners</Link>
+            </Button>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <Button color="inherit">
+              <Link to="/zombies">Zombies</Link>
+            </Button>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <Button color="inherit">
+              <Link to="/faqs">FAQS</Link>
+            </Button>
+          </Typography>
         </Toolbar>
       </AppBar>
     </div>
