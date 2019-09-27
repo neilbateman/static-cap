@@ -2,12 +2,10 @@ import React from 'react';
 import Nav from './Components/Nav';
 import './App.css';
 
-function App() {
-  return (
+const App = () => (
     <div className="App">
-<Nav/>
+      <Nav/>
     </div>
   );
-}
 
 export default App;
