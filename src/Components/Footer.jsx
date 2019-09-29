@@ -1,7 +1,7 @@
 import React from 'react';
 import {Typography, Container, Grid, Link} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const footers = [
   {
@@ -30,6 +30,8 @@ const useStyles = makeStyles(theme => ({footer: {
 export default function Footer() {
   const classes = useStyles();
   return (
+    <div>
+    <CssBaseline/>
 <Container maxWidth="md" component="footer" className={classes.footer}>
   <Grid container spacing={4} justify="space-evenly">
     {footers.map(footer => (
@@ -50,4 +52,5 @@ export default function Footer() {
     ))}
   </Grid>
 </Container>
+</div>
 )}
