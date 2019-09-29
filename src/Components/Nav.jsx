@@ -13,12 +13,14 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  link: {
+    flexGrow: 1,
+    marginRight: theme.spacing(0),
   },
   title: {
     flexGrow: 1,
   },
+
 }));
 
 export default function ButtonAppBar() {
@@ -28,27 +30,29 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
+        <Typography variant="h7"
+        className={classes.title}> LAKE JACKSON ZOMBIEFEST 5K</Typography>
+          <Typography variant="h6" className={classes.link}>
             <Button color="inherit">
               <Link to="/">Home</Link>
             </Button>
           </Typography>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.link}>
             <Button color="inherit">
               <Link to="/about">About</Link>
             </Button>
           </Typography>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.link}>
             <Button color="inherit">
               <Link to="/runners">Runners</Link>
             </Button>
           </Typography>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.link}>
             <Button color="inherit">
               <Link to="/zombies">Zombies</Link>
             </Button>
           </Typography>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.link}>
             <Button color="inherit">
               <Link to="/faqs">FAQS</Link>
             </Button>
